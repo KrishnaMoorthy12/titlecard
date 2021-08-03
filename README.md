@@ -6,5 +6,5 @@
 -->
 
 <p>
-    <img src="https://titlecard.herokuapp.com/?intro=Hey,%20There&title=Title%20Card&about=UnderDevelopment&bg=%2712c2e9">
+    <img src="https://titlecard.herokuapp.com/?card=plain&intro=Hey,%20There&title=Title%20Card&about=UnderDevelopment&bg=%2312c2e9">
 </p>
