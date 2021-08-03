@@ -22,7 +22,7 @@ class NameCard
      */
     static function Plain(
         string  $intro      =   "",
-        string  $name       =   "",
+        string  $title      =   "",
         string  $about      =   "",
         string  $fg         =   "white",
         string  $bg         =   "#262b2f",
@@ -68,7 +68,7 @@ class NameCard
                             $intro
                         </div>
                         <div id='name'>
-                            $name
+                            $title
                         </div>
                         <div id='about'>
                             $about

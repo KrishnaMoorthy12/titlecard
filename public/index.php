@@ -81,7 +81,7 @@
     {
       echo NameCard::Plain(
         intro: isset($_REQUEST['intro']) ? htmlentities($_REQUEST['intro']) : '',
-        name: isset($_REQUEST['name']) ? htmlentities($_REQUEST['name']) : '',
+        title: isset($_REQUEST['title']) ? htmlentities($_REQUEST['title']) : '',
         about: isset($_REQUEST['about']) ? htmlentities($_REQUEST['about']) : '',
         fg: isset($_REQUEST['fg']) ? htmlentities($_REQUEST['fg']) : 'white',
         bg: isset($_REQUEST['bg']) ? htmlentities($_REQUEST['bg']) : '#262b2f',
