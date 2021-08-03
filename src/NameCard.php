@@ -1,23 +1,25 @@
 <?php
 
 /**
- * @brief NameCard class has Many type of functions
- * to generate NameCard.
+ * NameCard class has Many type of functions to generate NameCard.
  */
 class NameCard
 {
     /**
-     * @brief Renders a plain card in svg format.
-     * 
+     * Renders a plain card in svg format.
+     *
      * @param intro : The intro text of the card
      * @param name : The name of the card
      * @param about : The about text of the card
      * @param fg : The foreground color of the card
      * @param bg : The background color of the card
-     * @param width : The width of the card
-     * @param height : The height of the card
-     * @param radius : The radius of the rounded corners
-     * 
+     * @param bg_sizing : The background size property (for supported bg values)
+     * @param bg_position : The background position property (for supported bg values)
+     * @param bg_repeat : The background repeat property (for supported bg values)
+     * @param width : The width of the card (in pixels)
+     * @param height : The height of the card (in pixels)
+     * @param radius : The radius of the rounded corners (in pixels)
+     *
      * @return string svg string
      */
     static function Plain(
@@ -26,9 +28,12 @@ class NameCard
         string  $about      =   "",
         string  $fg         =   "white",
         string  $bg         =   "#262b2f",
+        string  $bg_sizing  =   "cover",
+        string  $bg_repeat  =   "no-repeat",
+        string  $bg_position =   "center center",
         int     $width      =   600,
         int     $height     =   300,
-        int     $radius     =   0,
+        int     $radius     =   0
     ) {
         return "
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 $width $height'>
@@ -41,6 +46,9 @@ class NameCard
                             padding: 10px;
                             color: $fg;
                             background: $bg;
+                            background-size: $bg_sizing;
+                            background-repeat: $bg_repeat;
+                            background-position: $bg_position;
                             display: flex;
                             flex-direction: column;
                             align-items: center;
@@ -80,11 +88,11 @@ class NameCard
     }
 
     /**
-     * @brief Renders a invalid card in svg format.
+     * Renders a invalid card in svg format, if parameters are not valid.
      */
     static function invalid(
         int $width      =   600,
-        int $height     =   300,
+        int $height     =   300
     ) {
         return "
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 $width $height'>
