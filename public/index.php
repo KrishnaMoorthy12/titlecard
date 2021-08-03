@@ -46,7 +46,7 @@
           <nav class="navbar fixed-top">
             <div class="container">
               <div class="navbar-brand">
-                <a href="/">NameCard</a>
+                <a href="/">TitleCard</a>
               </div>
               <ul class="nav navbar-nav justify-content-end">
                 <li><a href="https://github.com/srilakshmikanthanp/namecard"><i data-feather="github"></i></a></li>
