@@ -1,0 +1,43 @@
+/**
+ * Copyright (c) 2021 Sri Lakshmi Kanthan P
+ * 
+ * This software is released under the MIT License.
+ * https://opensource.org/licenses/MIT
+ */
+
+header nav {
+    background: transparent;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to top, #f64f59, #c471ed, #12c2e9);
+    background: linear-gradient(to top, #f64f59, #c471ed, #12c2e9);
+}
+
+footer {
+    width: 100vw;
+    bottom: 0%;
+    position: fixed;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: transparent;
+}

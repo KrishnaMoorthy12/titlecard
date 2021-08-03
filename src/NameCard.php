@@ -20,8 +20,8 @@ class NameCard
      * 
      * @return string svg string
      */
-    static function Plain (
-        string  $intro      =   "Hi!, am",
+    static function Plain(
+        string  $intro      =   "",
         string  $name       =   "",
         string  $about      =   "",
         string  $fg         =   "white",
@@ -34,7 +34,7 @@ class NameCard
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 $width $height'>
                 <defs>
                     <style type='text/css'>
-                        #container{
+                        #container {
                             width: {$width}px;
                             height: {$height}px;
                             box-sizing: border-box;
@@ -49,7 +49,7 @@ class NameCard
                         }
 
                         #container > #intro {
-                            font-size: 150%;
+                            font-size: 125%;
                         }
 
                         #container > #name {
@@ -57,7 +57,7 @@ class NameCard
                         }
 
                         #container > #about {
-                                font-size: 150%;
+                            font-size: 125%;
                         }
                     </style>
                 </defs>
@@ -78,6 +78,46 @@ class NameCard
             </svg>
         ";
     }
-}
 
-?>
+    /**
+     * @brief Renders a invalid card in svg format.
+     */
+    static function invalid(
+        int $width      =   600,
+        int $height     =   300,
+    ) {
+        return "
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 $width $height'>
+                <defs>
+                    <style type='text/css'>
+                        #container {
+                            width: {$width}px;
+                            height: {$height}px;
+                            box-sizing: border-box;
+                            padding: 10px;
+                            color: black;
+                            background: #fdd;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        #container > #text {
+                            font-size: 150%;
+                        }
+
+                    </style>
+                </defs>
+
+                <foreignObject x='0' y='0' width='$width' height='$height'>
+                    <div xmlns='http://www.w3.org/1999/xhtml' id='container'>
+                        <div id='text'>
+                            Invalid Argument can't generate NameCard
+                        </div>
+                    </div>
+                </foreignObject>
+            </svg>
+        ";
+    }
+}
