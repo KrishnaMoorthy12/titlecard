@@ -58,7 +58,7 @@
           <div class="container text-center">
             <div class="row">
               <div class="col">
-                <p class="fs-4">Generate Name Card for github Readme</p>
+                <p class="fs-4">Generate Title Card for github Readme</p>
                 <p class="fs-6">Visit github for details</p> 
               </div>
             </div>
