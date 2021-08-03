@@ -31,7 +31,7 @@
           src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
         ></script>
         
-        <link href="/assets/css/main.css" rel="stylesheet" />
+        <link href="../assets/css/main.css" rel="stylesheet" />
 
         <script>
           $(function() {
